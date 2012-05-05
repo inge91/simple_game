@@ -5,7 +5,7 @@
 #include "global.h"
 
 //The dot that will move around on the screen
-class Character
+class Character : public Thing
 {
     private:
     // The X and Y offsets of the dot

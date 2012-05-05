@@ -159,6 +159,54 @@ global.cpp.s:
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/global.cpp.s
 .PHONY : global.cpp.s
 
+living_things.o: living_things.cpp.o
+.PHONY : living_things.o
+
+# target to build an object file
+living_things.cpp.o:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/living_things.cpp.o
+.PHONY : living_things.cpp.o
+
+living_things.i: living_things.cpp.i
+.PHONY : living_things.i
+
+# target to preprocess a source file
+living_things.cpp.i:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/living_things.cpp.i
+.PHONY : living_things.cpp.i
+
+living_things.s: living_things.cpp.s
+.PHONY : living_things.s
+
+# target to generate assembly for a file
+living_things.cpp.s:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/living_things.cpp.s
+.PHONY : living_things.cpp.s
+
+non_living_things.o: non_living_things.cpp.o
+.PHONY : non_living_things.o
+
+# target to build an object file
+non_living_things.cpp.o:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/non_living_things.cpp.o
+.PHONY : non_living_things.cpp.o
+
+non_living_things.i: non_living_things.cpp.i
+.PHONY : non_living_things.i
+
+# target to preprocess a source file
+non_living_things.cpp.i:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/non_living_things.cpp.i
+.PHONY : non_living_things.cpp.i
+
+non_living_things.s: non_living_things.cpp.s
+.PHONY : non_living_things.s
+
+# target to generate assembly for a file
+non_living_things.cpp.s:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/non_living_things.cpp.s
+.PHONY : non_living_things.cpp.s
+
 object.o: object.cpp.o
 .PHONY : object.o
 
@@ -207,6 +255,30 @@ test.cpp.s:
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/test.cpp.s
 .PHONY : test.cpp.s
 
+things.o: things.cpp.o
+.PHONY : things.o
+
+# target to build an object file
+things.cpp.o:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/things.cpp.o
+.PHONY : things.cpp.o
+
+things.i: things.cpp.i
+.PHONY : things.i
+
+# target to preprocess a source file
+things.cpp.i:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/things.cpp.i
+.PHONY : things.cpp.i
+
+things.s: things.cpp.s
+.PHONY : things.s
+
+# target to generate assembly for a file
+things.cpp.s:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/things.cpp.s
+.PHONY : things.cpp.s
+
 timer.o: timer.cpp.o
 .PHONY : timer.o
 
@@ -246,12 +318,21 @@ help:
 	@echo "... global.o"
 	@echo "... global.i"
 	@echo "... global.s"
+	@echo "... living_things.o"
+	@echo "... living_things.i"
+	@echo "... living_things.s"
+	@echo "... non_living_things.o"
+	@echo "... non_living_things.i"
+	@echo "... non_living_things.s"
 	@echo "... object.o"
 	@echo "... object.i"
 	@echo "... object.s"
 	@echo "... test.o"
 	@echo "... test.i"
 	@echo "... test.s"
+	@echo "... things.o"
+	@echo "... things.i"
+	@echo "... things.s"
 	@echo "... timer.o"
 	@echo "... timer.i"
 	@echo "... timer.s"

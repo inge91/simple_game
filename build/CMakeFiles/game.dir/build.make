@@ -164,13 +164,85 @@ CMakeFiles/game.dir/global.cpp.o.provides: CMakeFiles/game.dir/global.cpp.o.requ
 
 CMakeFiles/game.dir/global.cpp.o.provides.build: CMakeFiles/game.dir/global.cpp.o
 
+CMakeFiles/game.dir/things.cpp.o: CMakeFiles/game.dir/flags.make
+CMakeFiles/game.dir/things.cpp.o: ../things.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/inge/Dropbox/c++/simple_game/build/CMakeFiles $(CMAKE_PROGRESS_6)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/game.dir/things.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/things.cpp.o -c /home/inge/Dropbox/c++/simple_game/things.cpp
+
+CMakeFiles/game.dir/things.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/things.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/inge/Dropbox/c++/simple_game/things.cpp > CMakeFiles/game.dir/things.cpp.i
+
+CMakeFiles/game.dir/things.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/things.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/inge/Dropbox/c++/simple_game/things.cpp -o CMakeFiles/game.dir/things.cpp.s
+
+CMakeFiles/game.dir/things.cpp.o.requires:
+.PHONY : CMakeFiles/game.dir/things.cpp.o.requires
+
+CMakeFiles/game.dir/things.cpp.o.provides: CMakeFiles/game.dir/things.cpp.o.requires
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/things.cpp.o.provides.build
+.PHONY : CMakeFiles/game.dir/things.cpp.o.provides
+
+CMakeFiles/game.dir/things.cpp.o.provides.build: CMakeFiles/game.dir/things.cpp.o
+
+CMakeFiles/game.dir/living_things.cpp.o: CMakeFiles/game.dir/flags.make
+CMakeFiles/game.dir/living_things.cpp.o: ../living_things.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/inge/Dropbox/c++/simple_game/build/CMakeFiles $(CMAKE_PROGRESS_7)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/game.dir/living_things.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/living_things.cpp.o -c /home/inge/Dropbox/c++/simple_game/living_things.cpp
+
+CMakeFiles/game.dir/living_things.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/living_things.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/inge/Dropbox/c++/simple_game/living_things.cpp > CMakeFiles/game.dir/living_things.cpp.i
+
+CMakeFiles/game.dir/living_things.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/living_things.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/inge/Dropbox/c++/simple_game/living_things.cpp -o CMakeFiles/game.dir/living_things.cpp.s
+
+CMakeFiles/game.dir/living_things.cpp.o.requires:
+.PHONY : CMakeFiles/game.dir/living_things.cpp.o.requires
+
+CMakeFiles/game.dir/living_things.cpp.o.provides: CMakeFiles/game.dir/living_things.cpp.o.requires
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/living_things.cpp.o.provides.build
+.PHONY : CMakeFiles/game.dir/living_things.cpp.o.provides
+
+CMakeFiles/game.dir/living_things.cpp.o.provides.build: CMakeFiles/game.dir/living_things.cpp.o
+
+CMakeFiles/game.dir/non_living_things.cpp.o: CMakeFiles/game.dir/flags.make
+CMakeFiles/game.dir/non_living_things.cpp.o: ../non_living_things.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/inge/Dropbox/c++/simple_game/build/CMakeFiles $(CMAKE_PROGRESS_8)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/game.dir/non_living_things.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/non_living_things.cpp.o -c /home/inge/Dropbox/c++/simple_game/non_living_things.cpp
+
+CMakeFiles/game.dir/non_living_things.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/non_living_things.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/inge/Dropbox/c++/simple_game/non_living_things.cpp > CMakeFiles/game.dir/non_living_things.cpp.i
+
+CMakeFiles/game.dir/non_living_things.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/non_living_things.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/inge/Dropbox/c++/simple_game/non_living_things.cpp -o CMakeFiles/game.dir/non_living_things.cpp.s
+
+CMakeFiles/game.dir/non_living_things.cpp.o.requires:
+.PHONY : CMakeFiles/game.dir/non_living_things.cpp.o.requires
+
+CMakeFiles/game.dir/non_living_things.cpp.o.provides: CMakeFiles/game.dir/non_living_things.cpp.o.requires
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/non_living_things.cpp.o.provides.build
+.PHONY : CMakeFiles/game.dir/non_living_things.cpp.o.provides
+
+CMakeFiles/game.dir/non_living_things.cpp.o.provides.build: CMakeFiles/game.dir/non_living_things.cpp.o
+
 # Object files for target game
 game_OBJECTS = \
 "CMakeFiles/game.dir/test.cpp.o" \
 "CMakeFiles/game.dir/character.cpp.o" \
 "CMakeFiles/game.dir/timer.cpp.o" \
 "CMakeFiles/game.dir/object.cpp.o" \
-"CMakeFiles/game.dir/global.cpp.o"
+"CMakeFiles/game.dir/global.cpp.o" \
+"CMakeFiles/game.dir/things.cpp.o" \
+"CMakeFiles/game.dir/living_things.cpp.o" \
+"CMakeFiles/game.dir/non_living_things.cpp.o"
 
 # External object files for target game
 game_EXTERNAL_OBJECTS =
@@ -180,6 +252,9 @@ game: CMakeFiles/game.dir/character.cpp.o
 game: CMakeFiles/game.dir/timer.cpp.o
 game: CMakeFiles/game.dir/object.cpp.o
 game: CMakeFiles/game.dir/global.cpp.o
+game: CMakeFiles/game.dir/things.cpp.o
+game: CMakeFiles/game.dir/living_things.cpp.o
+game: CMakeFiles/game.dir/non_living_things.cpp.o
 game: CMakeFiles/game.dir/build.make
 game: /usr/lib/libSDLmain.a
 game: /usr/lib/libSDL.so
@@ -198,6 +273,9 @@ CMakeFiles/game.dir/requires: CMakeFiles/game.dir/character.cpp.o.requires
 CMakeFiles/game.dir/requires: CMakeFiles/game.dir/timer.cpp.o.requires
 CMakeFiles/game.dir/requires: CMakeFiles/game.dir/object.cpp.o.requires
 CMakeFiles/game.dir/requires: CMakeFiles/game.dir/global.cpp.o.requires
+CMakeFiles/game.dir/requires: CMakeFiles/game.dir/things.cpp.o.requires
+CMakeFiles/game.dir/requires: CMakeFiles/game.dir/living_things.cpp.o.requires
+CMakeFiles/game.dir/requires: CMakeFiles/game.dir/non_living_things.cpp.o.requires
 .PHONY : CMakeFiles/game.dir/requires
 
 CMakeFiles/game.dir/clean:
