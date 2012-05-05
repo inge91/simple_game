@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+   <FileVersion major="1" minor="6" />
+   <Project>
+      <Option title="game" />
+      <Option makefile_is_custom="1" />
+      <Option compiler="gcc" />
+      <Option virtualFolders="CMake Files\;" />
+      <Build>
+      <Target title="all">
+         <Option working_dir="/home/inge/Dropbox/c++/simple_game/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/inge/Dropbox/c++/simple_game/build/Makefile&quot;  VERBOSE=1 all" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/inge/Dropbox/c++/simple_game/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/inge/Dropbox/c++/simple_game/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/inge/Dropbox/c++/simple_game/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="game">
+         <Option output="/home/inge/Dropbox/c++/simple_game/build/game" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/inge/Dropbox/c++/simple_game/build" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/usr/include" />
+            <Add directory="/usr/lib/gcc/i686-pc-linux-gnu/4.6.3/../../../../include/c++/4.6.3" />
+            <Add directory="/usr/lib/gcc/i686-pc-linux-gnu/4.6.3/../../../../include/c++/4.6.3/backward" />
+            <Add directory="/usr/lib/gcc/i686-pc-linux-gnu/4.6.3/../../../../include/c++/4.6.3/i686-pc-linux-gnu" />
+            <Add directory="/usr/lib/gcc/i686-pc-linux-gnu/4.6.3/include" />
+            <Add directory="/usr/lib/gcc/i686-pc-linux-gnu/4.6.3/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/inge/Dropbox/c++/simple_game/build/Makefile&quot;  VERBOSE=1 game" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/inge/Dropbox/c++/simple_game/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/inge/Dropbox/c++/simple_game/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/inge/Dropbox/c++/simple_game/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="game/fast">
+         <Option output="/home/inge/Dropbox/c++/simple_game/build/game" prefix_auto="0" extension_auto="0" />
+         <Option working_dir="/home/inge/Dropbox/c++/simple_game/build" />
+         <Option object_output="./" />
+         <Option type="1" />
+         <Option compiler="gcc" />
+         <Compiler>
+            <Add directory="/usr/include" />
+            <Add directory="/usr/lib/gcc/i686-pc-linux-gnu/4.6.3/../../../../include/c++/4.6.3" />
+            <Add directory="/usr/lib/gcc/i686-pc-linux-gnu/4.6.3/../../../../include/c++/4.6.3/backward" />
+            <Add directory="/usr/lib/gcc/i686-pc-linux-gnu/4.6.3/../../../../include/c++/4.6.3/i686-pc-linux-gnu" />
+            <Add directory="/usr/lib/gcc/i686-pc-linux-gnu/4.6.3/include" />
+            <Add directory="/usr/lib/gcc/i686-pc-linux-gnu/4.6.3/include-fixed" />
+            <Add directory="/usr/local/include" />
+         </Compiler>
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/inge/Dropbox/c++/simple_game/build/Makefile&quot;  VERBOSE=1 game/fast" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/inge/Dropbox/c++/simple_game/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/inge/Dropbox/c++/simple_game/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/inge/Dropbox/c++/simple_game/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      <Target title="rebuild_cache">
+         <Option working_dir="/home/inge/Dropbox/c++/simple_game/build" />
+         <Option type="4" />
+         <MakeCommands>
+            <Build command="/usr/bin/make -f &quot;/home/inge/Dropbox/c++/simple_game/build/Makefile&quot;  VERBOSE=1 rebuild_cache" />
+            <CompileFile command="/usr/bin/make -f &quot;/home/inge/Dropbox/c++/simple_game/build/Makefile&quot;  VERBOSE=1 &quot;$file&quot;" />
+            <Clean command="/usr/bin/make -f &quot;/home/inge/Dropbox/c++/simple_game/build/Makefile&quot;  VERBOSE=1 clean" />
+            <DistClean command="/usr/bin/make -f &quot;/home/inge/Dropbox/c++/simple_game/build/Makefile&quot;  VERBOSE=1 clean" />
+         </MakeCommands>
+      </Target>
+      </Build>
+      <Unit filename="/home/inge/Dropbox/c++/simple_game/character.cpp">
+      </Unit>
+      <Unit filename="/home/inge/Dropbox/c++/simple_game/global.cpp">
+      </Unit>
+      <Unit filename="/home/inge/Dropbox/c++/simple_game/object.cpp">
+      </Unit>
+      <Unit filename="/home/inge/Dropbox/c++/simple_game/test.cpp">
+      </Unit>
+      <Unit filename="/home/inge/Dropbox/c++/simple_game/timer.cpp">
+      </Unit>
+      <Unit filename="/home/inge/Dropbox/c++/simple_game/character.h">
+      </Unit>
+      <Unit filename="/home/inge/Dropbox/c++/simple_game/global.h">
+      </Unit>
+      <Unit filename="/home/inge/Dropbox/c++/simple_game/object.h">
+      </Unit>
+      <Unit filename="/home/inge/Dropbox/c++/simple_game/test.h">
+      </Unit>
+      <Unit filename="/home/inge/Dropbox/c++/simple_game/timer.h">
+      </Unit>
+      <Unit filename="/home/inge/Dropbox/c++/simple_game/CMakeLists.txt">
+          <Option virtualFolder="CMake Files\" />
+      </Unit>
+   </Project>
+</CodeBlocks_project_file>
