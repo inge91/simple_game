@@ -27,4 +27,4 @@ link_libraries (
    SDLmain # Sadly not included in SDL_LIBRARY variable
 )
 
-add_executable(game test.cpp character.cpp timer.cpp object.cpp)
+add_executable(game test.cpp character.cpp timer.cpp object.cpp global.cpp)

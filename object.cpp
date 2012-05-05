@@ -1,7 +1,7 @@
 #include "object.h"
 //todo: correct HIGHT and WIDTH automatically by picture size
 
-Object::Object()
+Object::Object(std::string filename)
 {
     // We choose a beginning position for the object
     x = 30;
@@ -13,24 +13,27 @@ Object::Object()
     // No wins yet
     wins = 0;
     font = TTF_OpenFont("lazy.ttf", 28);
+
+    // The image accompanying the object
+    object = load_image(filename);
 }
 
 // Procedure for when the object was found
-void Object::found_object(int max_width, int max_height)
+void Object::found_object()
 {
-    new_position(max_height, max_width);
+    new_position();
     wins = wins + 1;
 }
 
 // choose a new position at random
-void Object::new_position(int max_height, int max_width)
+void Object::new_position()
 {
-    x = rand() % max_width;
-    y = rand() % max_height;
+    x = rand() % SCREEN_WIDTH;
+    y = rand() % SCREEN_HEIGHT;
 }
 
 // Showing the object
-void Object::show(SDL_Surface* object, SDL_Surface* screen)
+void Object::show()
 {
 
     //Holds offsets
@@ -41,15 +44,14 @@ void Object::show(SDL_Surface* object, SDL_Surface* screen)
     offset.y = y;
 
     //Blit
-    SDL_BlitSurface( object, NULL,  screen, &offset );
+    SDL_BlitSurface( object, NULL,  global::screen, &offset );
     SDL_Rect offset2;
     offset2.x = 20;
     offset2.y = 30;
     char score_text[32];
     sprintf(score_text, "Score: %d", wins);
     score = TTF_RenderText_Solid(font, score_text, {0,0,0});
-    SDL_BlitSurface(score, NULL, screen, &offset2);
-
+    SDL_BlitSurface(score, NULL, global::screen, &offset2);
 
 }
 

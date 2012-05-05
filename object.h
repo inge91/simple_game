@@ -9,7 +9,8 @@
 #include <string>
 #include <stdio.h>
 #include <stdlib.h>
-
+#include "test.h"
+#include "global.h"
 
 class Object
 {
@@ -28,17 +29,22 @@ class Object
     TTF_Font* font ;
     SDL_Color* score_color ;
 
+    // Use for Image
+    SDL_Surface* object;
+
     public:
     // Initialize variables
-    Object();
+    Object(std::string filename);
 
     // Procedure for when the object was found
-    void found_object(int max_w, int max_h);
+    void found_object();
 
     // New position for the object
-    void new_position(int max_h, int max_w);
+    void new_position();
 
-    void show(SDL_Surface* object, SDL_Surface* screen);
+    void show();
+
+
 
     // Get the amount of winds
     int get_wins();

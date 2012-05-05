@@ -1,33 +1,43 @@
 #ifndef CHARACTER_H
 #define CHARACTER_H
 #include "SDL/SDL.h"
+#include "test.h"
+#include "global.h"
 
 //The dot that will move around on the screen
 class Character
 {
     private:
-    //The X and Y offsets of the dot
+    // The X and Y offsets of the dot
     int x, y;
 
-    //The velocity of the dot
+    // The velocity of the dot
     int xVel, yVel;
-    //The dimensions of the dot
-    //int DOT_WIDTH = 20;
-    //int DOT_HEIGHT = 20;
 
+    // Character image;
+    SDL_Surface* character;
+
+    // Enum for the direction
+    enum Direction {
+        UP,
+        DOWN,
+        LEFT,
+        RIGHT
+    };
 
     public:
-    //Initializes the variables
-    Character();
+    // Initializes the variables
+    Character(std::string filename);
 
-    //Takes key presses and adjusts the dot's velocity
-    void handle_input(SDL_Event event);
+    // Takes key presses and adjusts the dot's velocity
+    void handle_input();
 
-    //Moves the dot
-    void move(int h, int w);
+    // Moves the dot
+    void move();
 
-    //Shows the dot on the screen
-    void show(SDL_Surface* dot, SDL_Surface* screen);
+    void change_image(Character::Direction direction);
+    // Shows the dot on the screen
+    void show();
 
     // Get all positions;
     int get_position_x();

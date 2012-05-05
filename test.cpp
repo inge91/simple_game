@@ -1,35 +1,11 @@
-//The headers
-#include "SDL/SDL.h"
-#include "SDL/SDL_image.h"
-#include "SDL/SDL_ttf.h"
-#include <string>
-#include <iostream>
-#include "timer.h"
-#include "character.h"
-#include "object.h"
+#include "test.h"
+#include "global.h"
 
-//The screen attributes
-const int SCREEN_WIDTH = 640;
-const int SCREEN_HEIGHT = 480;
-const int SCREEN_BPP = 32;
-
-//The frame rate
-const int FRAMES_PER_SECOND = 20;
-
-
-//The surfaces
-SDL_Surface *dot = NULL;
-SDL_Surface *screen = NULL;
-SDL_Surface *background = NULL;
-SDL_Surface *object =NULL;
-
-//The event structure
-SDL_Event event;
-
-
+// Checks if two objects collide or not
 bool collision_detection(int x1,  int y1, int w1, int h1,
                          int x2, int y2, int w2, int h2)
 {
+    // all x and y values of all rectangle sides
     int leftSide1 = x1;
     int rightSide1 = x1 + w1;
     int upSide1 = y1;
@@ -40,6 +16,7 @@ bool collision_detection(int x1,  int y1, int w1, int h1,
     int upSide2 = y2;
     int downSide2 = y2 + h2;
 
+    // if statemens detect no collisions
     if(downSide1 <= upSide2)
     {
         return false;
@@ -60,11 +37,12 @@ bool collision_detection(int x1,  int y1, int w1, int h1,
         return false;
     }
 
+    // collission has been detected
     return true;
 }
 
 
-SDL_Surface *load_image( std::string filename )
+SDL_Surface *load_image( std::string filename)
 {
     //The image that's loaded
     SDL_Surface* loadedImage = NULL;
@@ -118,10 +96,10 @@ bool init()
     }
 
     //Set up the screen
-    screen = SDL_SetVideoMode( SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_BPP, SDL_SWSURFACE );
+    global::screen = SDL_SetVideoMode( SCREEN_WIDTH, SCREEN_HEIGHT, SCREEN_BPP, SDL_SWSURFACE );
 
     //If there was an error in setting up the screen
-    if( screen == NULL )
+    if( global::screen == NULL )
     {
         return false;
     }
@@ -138,85 +116,55 @@ bool init()
     return true;
 }
 
-bool load_files()
-{
-    //Load the dot image
-    dot = load_image( "character.bmp" );
-    object = load_image( "object.bmp" );
-
-
-
-    //If there was a problem in loading the dot
-    if( dot == NULL || object == NULL)
-    {
-        std::cout<<"obj is empty";
-        return false;
-    }
-
-    //If everything loaded fine
-    return true;
-}
 
 void clean_up()
 {
-    //Free the surface
-    SDL_FreeSurface( dot );
-    SDL_FreeSurface( object);
 
     //Quit SDL
     SDL_Quit();
 }
 
 
-
-
-
 //Fill the background using input image
-void fill_background(SDL_Surface* background)
+void fill_background(SDL_Surface* the_background)
 {
-    for (int i = 0; i < SCREEN_WIDTH; i += background->w)
+    for (int i = 0; i < SCREEN_WIDTH; i += the_background->w)
     {
-        for (int j = 0; j < SCREEN_HEIGHT; j += background->h)
+        for (int j = 0; j < SCREEN_HEIGHT; j += the_background->h)
         {
-            apply_surface(i,j,background, screen);
+            apply_surface(i,j,the_background, global::screen);
         }
     }
-
 }
 
 
 int main( int argc, char* args[] )
 {
-    //Quit flag
+    // Quit flag
     bool quit = false;
 
-    //Initialize
+    // Initialize
     if( init() == false )
     {
         return 1;
     }
 
-    //Load the files
-    if( load_files() == false )
-    {
-        return 1;
-    }
 
     //The dot that will be used
-    Character myCharacter;
+    Character myCharacter("character.bmp");
 
     //The frame rate regulator
     Timer fps;
 
     // The object to find
-    Object myObject;
+    Object myObject("object.bmp");
 
     //Load the background
-    background = load_image("background.bmp");
-    fill_background(background);
-    myObject.show(object, screen);
+    global::background = load_image("background.bmp");
+    fill_background(global::background);
+    myObject.show();
 
-    SDL_Flip(screen);
+    SDL_Flip(global::screen);
 
     //While the user hasn't quit
     while( quit == false )
@@ -225,13 +173,13 @@ int main( int argc, char* args[] )
         fps.start();
 
         //While there's events to handle
-        while( SDL_PollEvent( &event ) )
+        while( SDL_PollEvent( &global::event ) )
         {
             //Handle events for the dot
-            myCharacter.handle_input(event);
+            myCharacter.handle_input();
 
             //If the user has Xed out the window
-            if( event.type == SDL_QUIT )
+            if( global::event.type == SDL_QUIT )
             {
                 //Quit the program
                 quit = true;
@@ -239,24 +187,24 @@ int main( int argc, char* args[] )
         }
 
         //Move the dot
-        myCharacter.move(SCREEN_HEIGHT, SCREEN_WIDTH);
+        myCharacter.move();
         if(collision_detection(myObject.get_position_x(), myObject.get_position_y()
                                , myObject.get_width(), myObject.get_height(),
                                myCharacter.get_position_x(), myCharacter.get_position_y(),
                                myCharacter.get_width(), myCharacter.get_height()) == true)
         {
-            myObject.found_object(SCREEN_WIDTH, SCREEN_HEIGHT);
+            myObject.found_object();
         }
 
-        //Fill the screen white
-        fill_background(background);
+        // Fill in background again
+        fill_background(global::background);
 
-        //Show the dot on the screen
-        myCharacter.show(dot, screen);
-        myObject.show(object, screen);
+        // Show element back on the screen
+        myCharacter.show();
+        myObject.show();
 
         //Update the screen
-        if( SDL_Flip( screen ) == -1 )
+        if( SDL_Flip( global::screen ) == -1 )
         {
             return 1;
         }

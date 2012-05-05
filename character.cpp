@@ -1,10 +1,11 @@
 #include "character.h"
+#include "test.h"
 
 int DOT_HEIGHT = 39;
 int DOT_WIDTH = 23;
 
 
-Character::Character()
+Character::Character(std::string filename)
 {
     //Initialize the offsets
     x = 0;
@@ -13,27 +14,45 @@ Character::Character()
     //Initialize the velocity
     xVel = 0;
     yVel = 0;
+
+    // Initialize image
+    character = load_image(filename);
 }
 
-void Character::handle_input(SDL_Event event)
+void Character::handle_input()
 {
     //If a key was pressed
-    if( event.type == SDL_KEYDOWN )
+    if( global::event.type == SDL_KEYDOWN )
     {
         //Adjust the velocity
-        switch( event.key.keysym.sym )
+        switch( global::event.key.keysym.sym )
         {
-            case SDLK_UP: yVel -= DOT_HEIGHT / 6; break;
-            case SDLK_DOWN: yVel += DOT_HEIGHT / 6; break;
-            case SDLK_LEFT: xVel -= DOT_WIDTH / 6; break;
-            case SDLK_RIGHT: xVel += DOT_WIDTH / 6; break;
-        }
-    }
+            case SDLK_UP:
+                yVel -= DOT_HEIGHT / 6;
+                change_image(UP);
+                break;
+
+            case SDLK_DOWN:
+                    yVel += DOT_HEIGHT / 6;
+                    change_image(DOWN);
+                    break;
+
+            case SDLK_LEFT:
+                xVel -= DOT_WIDTH / 6;
+                change_image(LEFT);
+                break;
+
+            case SDLK_RIGHT:
+                xVel += DOT_WIDTH / 6;
+                change_image(RIGHT);
+                break;
+
+}    }
     //If a key was released
-    else if( event.type == SDL_KEYUP )
+    else if( global::event.type == SDL_KEYUP )
     {
         //Adjust the velocity
-        switch( event.key.keysym.sym )
+        switch( global::event.key.keysym.sym )
         {
             case SDLK_UP: yVel += DOT_HEIGHT / 6; break;
             case SDLK_DOWN: yVel -= DOT_HEIGHT / 6; break;
@@ -43,7 +62,7 @@ void Character::handle_input(SDL_Event event)
     }
 }
 
-void Character::move(int SCREEN_HEIGHT, int SCREEN_WIDTH)
+void Character::move()
 {
     //Move the dot left or right
     x += xVel;
@@ -56,7 +75,7 @@ void Character::move(int SCREEN_HEIGHT, int SCREEN_WIDTH)
 
    if( (x + DOT_WIDTH) > SCREEN_WIDTH )
    {
-        x = SCREEN_WIDTH - DOT_WIDTH ;
+        x = SCREEN_WIDTH - DOT_WIDTH;
    }
 
     //Move the dot left or right
@@ -75,7 +94,7 @@ void Character::move(int SCREEN_HEIGHT, int SCREEN_WIDTH)
 
 }
 
-void Character::show(SDL_Surface* dot, SDL_Surface* screen)
+void Character::show()
 {
     //Show the dot
 
@@ -87,8 +106,36 @@ void Character::show(SDL_Surface* dot, SDL_Surface* screen)
     offset.y = y;
 
     //Blit
-    SDL_BlitSurface( dot, NULL,  screen, &offset );
+    SDL_BlitSurface(character, NULL,  global::screen, &offset );
 }
+
+
+//FIXME: Dont change after last keypress
+void Character::change_image(Character::Direction direction)
+{
+    switch(direction)
+    {
+
+        case UP:
+            std::cout<<"Change up\n";
+            character = load_image("character_up.bmp");
+            break;
+        case DOWN:
+            std::cout<<"Change down\n";
+            character = load_image("character_down.bmp");
+            break;
+        case LEFT:
+            std::cout<<"Change left\n";
+            character = load_image("character_left.bmp");
+            break;
+        case RIGHT:
+            std::cout<<"Change right\n";
+            character = load_image("character_right.bmp");
+            break;
+    }
+
+}
+
 
 int Character::get_position_x()
 {
