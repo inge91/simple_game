@@ -20,22 +20,18 @@ void Character::handle_input()
         {
             case SDLK_UP:
                 yVel -= m_height / 8;
-                change_image(UP);
                 break;
 
             case SDLK_DOWN:
                     yVel += m_height / 8;
-                    change_image(DOWN);
                     break;
 
             case SDLK_LEFT:
                 xVel -= m_width / 6;
-                change_image(LEFT);
                 break;
 
             case SDLK_RIGHT:
                 xVel += m_width / 6;
-                change_image(RIGHT);
                 break;
 
 }    }
@@ -57,6 +53,14 @@ void Character::move()
 {
     //Move the dot left or right
     m_x += xVel;
+    if(xVel > 0)
+    {
+        change_image(RIGHT);
+    }
+    if(xVel < 0)
+    {
+        change_image(LEFT);
+    }
 
    // check if not out of bounds
    if( m_x < 0)
@@ -71,6 +75,16 @@ void Character::move()
 
     //Move the dot left or right
     m_y += yVel;
+
+    if(yVel > 0)
+    {
+        change_image(DOWN);
+    }
+
+    if(yVel < 0)
+    {
+        change_image(UP);
+    }
 
    // check if not out of bounds
    if( m_y < 0)

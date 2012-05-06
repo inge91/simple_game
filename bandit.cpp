@@ -55,8 +55,29 @@ void Bandit::move(){
     }
 
     else{
-     m_x + 3;
-     m_y + 3;
+        // The cases in which x and y positions are equallty far away
+        if(m_x < target->get_position_x() && m_y < target->get_position_y())
+        {
+            m_x += 1.5;
+            m_y += 1.5;
+        }
+        if(m_x > target->get_position_x() && m_y < target->get_position_y())
+        {
+            m_x -= 1.5;
+            m_y += 1.5;
+        }
+
+        if(m_x < target->get_position_x() && m_y > target->get_position_y())
+        {
+            m_x += 1.5;
+            m_y -= 1.5;
+        }
+
+        if(m_x > target->get_position_x() && m_y > target->get_position_y())
+        {
+            m_x -= 1.5;
+            m_y -= 1.5;
+        }
     }
 }
            // nu kan je zijn positie opvragen
