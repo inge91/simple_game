@@ -84,6 +84,8 @@
       </Unit>
       <Unit filename="/home/inge/Dropbox/c++/simple_game/object.cpp">
       </Unit>
+      <Unit filename="/home/inge/Dropbox/c++/simple_game/targetable.cpp">
+      </Unit>
       <Unit filename="/home/inge/Dropbox/c++/simple_game/test.cpp">
       </Unit>
       <Unit filename="/home/inge/Dropbox/c++/simple_game/things.cpp">
@@ -101,6 +103,8 @@
       <Unit filename="/home/inge/Dropbox/c++/simple_game/non_living_things.h">
       </Unit>
       <Unit filename="/home/inge/Dropbox/c++/simple_game/object.h">
+      </Unit>
+      <Unit filename="/home/inge/Dropbox/c++/simple_game/targetable.h">
       </Unit>
       <Unit filename="/home/inge/Dropbox/c++/simple_game/test.h">
       </Unit>

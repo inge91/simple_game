@@ -9,7 +9,7 @@ public:
     Living_things(int x, int y, std::string filename);
 
     virtual void move(){}
-    void show();
+    virtual void show();
 };
 
 #endif // LIVING_THINGS_H

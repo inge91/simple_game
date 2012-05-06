@@ -107,5 +107,16 @@ void Character::change_image(Character::Direction direction)
 
 }
 
+void Character::respawn()
+{
+    m_x = 0;
+    m_y = 0;
+    m_invul = true;
+}
+
+bool Character::get_invul()
+{
+    return m_invul;
+}
 
 

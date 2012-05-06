@@ -28,4 +28,5 @@ link_libraries (
 )
 
 add_executable(game test.cpp character.cpp timer.cpp object.cpp
- global.cpp things.cpp living_things.cpp non_living_things.cpp bandit.cpp )
+ global.cpp things.cpp living_things.cpp non_living_things.cpp bandit.cpp
+targetable.cpp)

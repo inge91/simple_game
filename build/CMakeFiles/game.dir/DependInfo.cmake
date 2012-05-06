@@ -10,6 +10,7 @@ SET(CMAKE_DEPENDS_CHECK_CXX
   "/home/inge/Dropbox/c++/simple_game/living_things.cpp" "/home/inge/Dropbox/c++/simple_game/build/CMakeFiles/game.dir/living_things.cpp.o"
   "/home/inge/Dropbox/c++/simple_game/non_living_things.cpp" "/home/inge/Dropbox/c++/simple_game/build/CMakeFiles/game.dir/non_living_things.cpp.o"
   "/home/inge/Dropbox/c++/simple_game/object.cpp" "/home/inge/Dropbox/c++/simple_game/build/CMakeFiles/game.dir/object.cpp.o"
+  "/home/inge/Dropbox/c++/simple_game/targetable.cpp" "/home/inge/Dropbox/c++/simple_game/build/CMakeFiles/game.dir/targetable.cpp.o"
   "/home/inge/Dropbox/c++/simple_game/test.cpp" "/home/inge/Dropbox/c++/simple_game/build/CMakeFiles/game.dir/test.cpp.o"
   "/home/inge/Dropbox/c++/simple_game/things.cpp" "/home/inge/Dropbox/c++/simple_game/build/CMakeFiles/game.dir/things.cpp.o"
   "/home/inge/Dropbox/c++/simple_game/timer.cpp" "/home/inge/Dropbox/c++/simple_game/build/CMakeFiles/game.dir/timer.cpp.o"

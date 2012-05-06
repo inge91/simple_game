@@ -4,9 +4,10 @@
 #include "test.h"
 #include "global.h"
 #include "living_things.h"
+#include "targetable.h"
 
 //The dot that will move around on the screen
-class Character : public Living_things
+class Character : public Living_things, public Targetable
 {
     private:
 
@@ -28,10 +29,11 @@ class Character : public Living_things
     void handle_input();
 
     // Moves the dot
-    void move();
+    virtual void move() ;
 
     void change_image(Character::Direction direction);
-
+    virtual void respawn() ;
+    bool get_invul();
 };
 
 #endif

@@ -3,6 +3,7 @@
 #include "character.h"
 #include "object.h"
 #include "bandit.h"
+#include "targetable.h"
 
 // Checks if two objects collide or not
 bool collision_detection(int x1,  int y1, int w1, int h1,
@@ -158,8 +159,12 @@ int main( int argc, char* args[] )
 
     //The frame rate regulator
     Timer fps;
+    Timer invul_timer;
 
     Bandit myBandit("thief_left.bmp", &myCharacter);
+
+    // the target of the bandit
+    Targetable* target = myBandit.return_target();
 
     // The object to find
     Object myObject("object.bmp");
@@ -201,11 +206,25 @@ int main( int argc, char* args[] )
                                myCharacter.get_position_x(), myCharacter.get_position_y(),
                                myCharacter.get_width(), myCharacter.get_height()) == true)
         {
-            myObject.found_object();
+            myObject.respawn();
         }
 
         // Fill in background again
         fill_background(global::background);
+
+        // If the bandit is caught start invul timer
+        if( myBandit.check_if_caught())
+        {
+            // If target has invulneraibility check until when
+            if(target->get_invul() == true)
+            {
+                invul_timer.start();
+            }
+        }
+        if(invul_timer.get_ticks() > 5000)
+        {
+            target->set_invul(false);
+        }
 
         // Show element back on the screen
         myCharacter.show();

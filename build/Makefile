@@ -255,6 +255,30 @@ object.cpp.s:
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/object.cpp.s
 .PHONY : object.cpp.s
 
+targetable.o: targetable.cpp.o
+.PHONY : targetable.o
+
+# target to build an object file
+targetable.cpp.o:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/targetable.cpp.o
+.PHONY : targetable.cpp.o
+
+targetable.i: targetable.cpp.i
+.PHONY : targetable.i
+
+# target to preprocess a source file
+targetable.cpp.i:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/targetable.cpp.i
+.PHONY : targetable.cpp.i
+
+targetable.s: targetable.cpp.s
+.PHONY : targetable.s
+
+# target to generate assembly for a file
+targetable.cpp.s:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/targetable.cpp.s
+.PHONY : targetable.cpp.s
+
 test.o: test.cpp.o
 .PHONY : test.o
 
@@ -354,6 +378,9 @@ help:
 	@echo "... object.o"
 	@echo "... object.i"
 	@echo "... object.s"
+	@echo "... targetable.o"
+	@echo "... targetable.i"
+	@echo "... targetable.s"
 	@echo "... test.o"
 	@echo "... test.i"
 	@echo "... test.s"

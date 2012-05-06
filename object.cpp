@@ -2,12 +2,8 @@
 //todo: correct HIGHT and WIDTH automatically by picture size
 
 Object::Object(std::string filename)
+    :Non_living_things(30,30, filename)
 {
-    // We choose a beginning position for the object
-    x = 30;
-    y = 30;
-    OBJECT_HEIGHT = 20;
-    OBJECT_WIDTH = 20;
     srand(time(NULL));
 
     // No wins yet
@@ -19,7 +15,7 @@ Object::Object(std::string filename)
 }
 
 // Procedure for when the object was found
-void Object::found_object()
+void Object::respawn()
 {
     new_position();
     wins = wins + 1;
@@ -28,8 +24,8 @@ void Object::found_object()
 // choose a new position at random
 void Object::new_position()
 {
-    x = rand() % SCREEN_WIDTH;
-    y = rand() % SCREEN_HEIGHT;
+    m_x = rand() % SCREEN_WIDTH;
+    m_y = rand() % SCREEN_HEIGHT;
 }
 
 // Showing the object
@@ -40,8 +36,8 @@ void Object::show()
     SDL_Rect offset;
 
     //Get offsets
-    offset.x = x;
-    offset.y = y;
+    offset.x = m_x;
+    offset.y = m_y;
 
     //Blit
     SDL_BlitSurface( object, NULL,  global::screen, &offset );
@@ -55,31 +51,3 @@ void Object::show()
 
 }
 
-
-// Return the amount of wins
-int Object::get_wins()
-{
-    return wins;
-}
-
-// Return the x position
-int Object::get_position_x()
-{
-    return x;
-}
-
-// Return the y position
-int Object::get_position_y()
-{
-    return y;
-}
-
-int Object::get_width()
-{
-    return OBJECT_WIDTH;
-}
-
-int Object::get_height()
-{
-    return OBJECT_HEIGHT;
-}

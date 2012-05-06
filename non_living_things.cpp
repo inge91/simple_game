@@ -1,5 +1,6 @@
 #include "non_living_things.h"
 
-non_living_things::non_living_things()
+Non_living_things::Non_living_things(int x, int y, std::string filename)
+    :Things(x, y, filename)
 {
 }

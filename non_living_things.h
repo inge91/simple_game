@@ -1,10 +1,11 @@
 #ifndef NON_LIVING_THINGS_H
 #define NON_LIVING_THINGS_H
+#include "things.h"
 
-class non_living_things
+class Non_living_things: public Things
 {
 public:
-    non_living_things();
+    Non_living_things(int x, int y, std::string filename);
 };
 
 #endif // NON_LIVING_THINGS_H

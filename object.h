@@ -11,8 +11,10 @@
 #include <stdlib.h>
 #include "test.h"
 #include "global.h"
+#include "non_living_things.h"
+#include "targetable.h"
 
-class Object
+class Object: public Non_living_things, public Targetable
 {
     private:
 
@@ -20,9 +22,6 @@ class Object
     int x, y;
     // The amount of objects picked up
     int wins;
-
-    int OBJECT_HEIGHT ;
-    int OBJECT_WIDTH  ;
 
     // used for score
     SDL_Surface* score ;
@@ -37,23 +36,16 @@ class Object
     Object(std::string filename);
 
     // Procedure for when the object was found
-    void found_object();
+    void respawn();
 
     // New position for the object
     void new_position();
 
     void show();
 
-
-
     // Get the amount of winds
     int get_wins();
 
-    // Return object position
-    int get_position_x();
-    int get_position_y();
-    int get_width();
-    int get_height();
 
 };
 

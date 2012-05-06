@@ -6,6 +6,7 @@ CMakeFiles/game.dir/bandit.cpp.o
  /home/inge/Dropbox/c++/simple_game/bandit.h
  /home/inge/Dropbox/c++/simple_game/global.h
  /home/inge/Dropbox/c++/simple_game/living_things.h
+ /home/inge/Dropbox/c++/simple_game/targetable.h
  /home/inge/Dropbox/c++/simple_game/test.h
  /home/inge/Dropbox/c++/simple_game/things.h
  /home/inge/Dropbox/c++/simple_game/timer.h
@@ -14,6 +15,7 @@ CMakeFiles/game.dir/character.cpp.o
  /home/inge/Dropbox/c++/simple_game/character.h
  /home/inge/Dropbox/c++/simple_game/global.h
  /home/inge/Dropbox/c++/simple_game/living_things.h
+ /home/inge/Dropbox/c++/simple_game/targetable.h
  /home/inge/Dropbox/c++/simple_game/test.h
  /home/inge/Dropbox/c++/simple_game/things.h
  /home/inge/Dropbox/c++/simple_game/timer.h
@@ -28,20 +30,32 @@ CMakeFiles/game.dir/living_things.cpp.o
  /home/inge/Dropbox/c++/simple_game/things.h
  /home/inge/Dropbox/c++/simple_game/timer.h
 CMakeFiles/game.dir/non_living_things.cpp.o
+ /home/inge/Dropbox/c++/simple_game/global.h
  /home/inge/Dropbox/c++/simple_game/non_living_things.cpp
  /home/inge/Dropbox/c++/simple_game/non_living_things.h
+ /home/inge/Dropbox/c++/simple_game/test.h
+ /home/inge/Dropbox/c++/simple_game/things.h
+ /home/inge/Dropbox/c++/simple_game/timer.h
 CMakeFiles/game.dir/object.cpp.o
  /home/inge/Dropbox/c++/simple_game/global.h
+ /home/inge/Dropbox/c++/simple_game/non_living_things.h
  /home/inge/Dropbox/c++/simple_game/object.cpp
  /home/inge/Dropbox/c++/simple_game/object.h
+ /home/inge/Dropbox/c++/simple_game/targetable.h
  /home/inge/Dropbox/c++/simple_game/test.h
+ /home/inge/Dropbox/c++/simple_game/things.h
  /home/inge/Dropbox/c++/simple_game/timer.h
+CMakeFiles/game.dir/targetable.cpp.o
+ /home/inge/Dropbox/c++/simple_game/targetable.cpp
+ /home/inge/Dropbox/c++/simple_game/targetable.h
 CMakeFiles/game.dir/test.cpp.o
  /home/inge/Dropbox/c++/simple_game/bandit.h
  /home/inge/Dropbox/c++/simple_game/character.h
  /home/inge/Dropbox/c++/simple_game/global.h
  /home/inge/Dropbox/c++/simple_game/living_things.h
+ /home/inge/Dropbox/c++/simple_game/non_living_things.h
  /home/inge/Dropbox/c++/simple_game/object.h
+ /home/inge/Dropbox/c++/simple_game/targetable.h
  /home/inge/Dropbox/c++/simple_game/test.cpp
  /home/inge/Dropbox/c++/simple_game/test.h
  /home/inge/Dropbox/c++/simple_game/things.h
