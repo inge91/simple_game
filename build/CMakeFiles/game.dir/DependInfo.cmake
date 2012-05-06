@@ -4,6 +4,7 @@ SET(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 SET(CMAKE_DEPENDS_CHECK_CXX
+  "/home/inge/Dropbox/c++/simple_game/bandit.cpp" "/home/inge/Dropbox/c++/simple_game/build/CMakeFiles/game.dir/bandit.cpp.o"
   "/home/inge/Dropbox/c++/simple_game/character.cpp" "/home/inge/Dropbox/c++/simple_game/build/CMakeFiles/game.dir/character.cpp.o"
   "/home/inge/Dropbox/c++/simple_game/global.cpp" "/home/inge/Dropbox/c++/simple_game/build/CMakeFiles/game.dir/global.cpp.o"
   "/home/inge/Dropbox/c++/simple_game/living_things.cpp" "/home/inge/Dropbox/c++/simple_game/build/CMakeFiles/game.dir/living_things.cpp.o"

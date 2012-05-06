@@ -1,33 +1,40 @@
 #include "things.h"
 
-Things::Things(int x_pos, int y_pos, int im_width, int im_height,
-               std::string filename)
+Things::Things()
+{}
+
+Things::Things(int x_pos, int y_pos, std::string filename)
 {
+    // Initialise x and y pos in board
     m_x = x_pos;
     m_y = y_pos;
-    m_width = im_width;
-    m_height = im_height;
 
     m_image = load_image(filename);
+
+    // Height and width determined by image size
+    m_width = m_image->w;
+    m_height = m_image->h;
 }
 
-Things::get_position_x()
+int Things::get_position_x()
 {
-    return x;
+    return m_x;
 }
 
-Things::get_position_y()
+int Things::get_position_y()
 {
-    return y;
+    return m_y;
 }
 
-Things::get_height()
+int Things::get_height()
 {
-    return height;
+    return m_height;
 }
 
-Things::get_width()
+int Things::get_width()
 {
-    return width;
+    return m_width;
 }
+
+
 

@@ -7,6 +7,7 @@ FILE(REMOVE_RECURSE
   "CMakeFiles/game.dir/things.cpp.o"
   "CMakeFiles/game.dir/living_things.cpp.o"
   "CMakeFiles/game.dir/non_living_things.cpp.o"
+  "CMakeFiles/game.dir/bandit.cpp.o"
   "game.pdb"
   "game"
 )

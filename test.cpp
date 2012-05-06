@@ -1,5 +1,8 @@
 #include "test.h"
 #include "global.h"
+#include "character.h"
+#include "object.h"
+#include "bandit.h"
 
 // Checks if two objects collide or not
 bool collision_detection(int x1,  int y1, int w1, int h1,
@@ -156,6 +159,8 @@ int main( int argc, char* args[] )
     //The frame rate regulator
     Timer fps;
 
+    Bandit myBandit("thief_left.bmp", &myCharacter);
+
     // The object to find
     Object myObject("object.bmp");
 
@@ -163,6 +168,8 @@ int main( int argc, char* args[] )
     global::background = load_image("background.bmp");
     fill_background(global::background);
     myObject.show();
+    myBandit.show();
+
 
     SDL_Flip(global::screen);
 
@@ -188,6 +195,7 @@ int main( int argc, char* args[] )
 
         //Move the dot
         myCharacter.move();
+        myBandit.move();
         if(collision_detection(myObject.get_position_x(), myObject.get_position_y()
                                , myObject.get_width(), myObject.get_height(),
                                myCharacter.get_position_x(), myCharacter.get_position_y(),
@@ -202,6 +210,7 @@ int main( int argc, char* args[] )
         // Show element back on the screen
         myCharacter.show();
         myObject.show();
+        myBandit.show();
 
         //Update the screen
         if( SDL_Flip( global::screen ) == -1 )

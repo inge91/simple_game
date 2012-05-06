@@ -1,22 +1,13 @@
 #include "character.h"
 #include "test.h"
 
-int DOT_HEIGHT = 39;
-int DOT_WIDTH = 23;
-
-
 Character::Character(std::string filename)
+    :Living_things(0,0, filename)
 {
-    //Initialize the offsets
-    x = 0;
-    y = 0;
-
     //Initialize the velocity
     xVel = 0;
     yVel = 0;
 
-    // Initialize image
-    character = load_image(filename);
 }
 
 void Character::handle_input()
@@ -28,22 +19,22 @@ void Character::handle_input()
         switch( global::event.key.keysym.sym )
         {
             case SDLK_UP:
-                yVel -= DOT_HEIGHT / 6;
+                yVel -= m_height / 8;
                 change_image(UP);
                 break;
 
             case SDLK_DOWN:
-                    yVel += DOT_HEIGHT / 6;
+                    yVel += m_height / 8;
                     change_image(DOWN);
                     break;
 
             case SDLK_LEFT:
-                xVel -= DOT_WIDTH / 6;
+                xVel -= m_width / 6;
                 change_image(LEFT);
                 break;
 
             case SDLK_RIGHT:
-                xVel += DOT_WIDTH / 6;
+                xVel += m_width / 6;
                 change_image(RIGHT);
                 break;
 
@@ -54,10 +45,10 @@ void Character::handle_input()
         //Adjust the velocity
         switch( global::event.key.keysym.sym )
         {
-            case SDLK_UP: yVel += DOT_HEIGHT / 6; break;
-            case SDLK_DOWN: yVel -= DOT_HEIGHT / 6; break;
-            case SDLK_LEFT: xVel += DOT_WIDTH / 6; break;
-            case SDLK_RIGHT: xVel -= DOT_WIDTH / 6; break;
+            case SDLK_UP: yVel += m_height / 8; break;
+            case SDLK_DOWN: yVel -= m_height / 8; break;
+            case SDLK_LEFT: xVel += m_width / 6; break;
+            case SDLK_RIGHT: xVel -= m_width / 6; break;
         }
     }
 }
@@ -65,96 +56,56 @@ void Character::handle_input()
 void Character::move()
 {
     //Move the dot left or right
-    x += xVel;
+    m_x += xVel;
 
    // check if not out of bounds
-   if( x < 0)
+   if( m_x < 0)
    {
-       x = 0;
+       m_x = 0;
    }
 
-   if( (x + DOT_WIDTH) > SCREEN_WIDTH )
+   if( (m_x + m_width) > SCREEN_WIDTH )
    {
-        x = SCREEN_WIDTH - DOT_WIDTH;
+        m_x = SCREEN_WIDTH - m_width;
    }
 
     //Move the dot left or right
-    y += yVel;
+    m_y += yVel;
 
    // check if not out of bounds
-   if( y < 0)
+   if( m_y < 0)
    {
-       y = 0;
+       m_y = 0;
    }
 
-   if( (y + DOT_HEIGHT) > SCREEN_HEIGHT )
+   if( (m_y + m_height) > SCREEN_HEIGHT )
    {
-        y = SCREEN_HEIGHT - DOT_HEIGHT;
+        m_y = SCREEN_HEIGHT - m_height;
    }
 
 }
 
-void Character::show()
-{
-    //Show the dot
 
-    //Holds offsets
-    SDL_Rect offset;
-
-    //Get offsets
-    offset.x = x;
-    offset.y = y;
-
-    //Blit
-    SDL_BlitSurface(character, NULL,  global::screen, &offset );
-}
-
-
-//FIXME: Dont change after last keypress
+//FIXME: Dont change after last keypress, but direction of movement
 void Character::change_image(Character::Direction direction)
 {
     switch(direction)
     {
-
         case UP:
-            std::cout<<"Change up\n";
-            character = load_image("character_up.bmp");
+            m_image = load_image("character_up.bmp");
             break;
         case DOWN:
-            std::cout<<"Change down\n";
-            character = load_image("character_down.bmp");
+            m_image = load_image("character_down.bmp");
             break;
         case LEFT:
-            std::cout<<"Change left\n";
-            character = load_image("character_left.bmp");
+            m_image = load_image("character_left.bmp");
             break;
         case RIGHT:
-            std::cout<<"Change right\n";
-            character = load_image("character_right.bmp");
+            m_image = load_image("character_right.bmp");
             break;
     }
 
 }
 
-
-int Character::get_position_x()
-{
-    return x;
-}
-
-int Character::get_position_y()
-{
-    return y;
-}
-
-int Character::get_height()
-{
-    return DOT_HEIGHT;
-}
-
-int Character::get_width()
-{
-    return DOT_WIDTH;
-}
 
 

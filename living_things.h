@@ -1,12 +1,15 @@
 #ifndef LIVING_THINGS_H
 #define LIVING_THINGS_H
+#include "things.h"
 
-class living_things
+class Things;
+class Living_things:public Things
 {
 public:
-    living_things();
+    Living_things(int x, int y, std::string filename);
 
-    move
+    virtual void move(){}
+    void show();
 };
 
 #endif // LIVING_THINGS_H

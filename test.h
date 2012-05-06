@@ -9,8 +9,8 @@
 #include <iostream>
 #include "test.h"
 #include "timer.h"
-#include "character.h"
-#include "object.h"
+//#include "character.h"
+//#include "object.h"
 
 
 //The screen attributes

@@ -72,6 +72,8 @@
          </MakeCommands>
       </Target>
       </Build>
+      <Unit filename="/home/inge/Dropbox/c++/simple_game/bandit.cpp">
+      </Unit>
       <Unit filename="/home/inge/Dropbox/c++/simple_game/character.cpp">
       </Unit>
       <Unit filename="/home/inge/Dropbox/c++/simple_game/global.cpp">
@@ -87,6 +89,8 @@
       <Unit filename="/home/inge/Dropbox/c++/simple_game/things.cpp">
       </Unit>
       <Unit filename="/home/inge/Dropbox/c++/simple_game/timer.cpp">
+      </Unit>
+      <Unit filename="/home/inge/Dropbox/c++/simple_game/bandit.h">
       </Unit>
       <Unit filename="/home/inge/Dropbox/c++/simple_game/character.h">
       </Unit>

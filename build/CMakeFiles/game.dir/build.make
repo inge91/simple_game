@@ -233,6 +233,29 @@ CMakeFiles/game.dir/non_living_things.cpp.o.provides: CMakeFiles/game.dir/non_li
 
 CMakeFiles/game.dir/non_living_things.cpp.o.provides.build: CMakeFiles/game.dir/non_living_things.cpp.o
 
+CMakeFiles/game.dir/bandit.cpp.o: CMakeFiles/game.dir/flags.make
+CMakeFiles/game.dir/bandit.cpp.o: ../bandit.cpp
+	$(CMAKE_COMMAND) -E cmake_progress_report /home/inge/Dropbox/c++/simple_game/build/CMakeFiles $(CMAKE_PROGRESS_9)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Building CXX object CMakeFiles/game.dir/bandit.cpp.o"
+	/usr/bin/c++   $(CXX_DEFINES) $(CXX_FLAGS) -o CMakeFiles/game.dir/bandit.cpp.o -c /home/inge/Dropbox/c++/simple_game/bandit.cpp
+
+CMakeFiles/game.dir/bandit.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/game.dir/bandit.cpp.i"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -E /home/inge/Dropbox/c++/simple_game/bandit.cpp > CMakeFiles/game.dir/bandit.cpp.i
+
+CMakeFiles/game.dir/bandit.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/game.dir/bandit.cpp.s"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_FLAGS) -S /home/inge/Dropbox/c++/simple_game/bandit.cpp -o CMakeFiles/game.dir/bandit.cpp.s
+
+CMakeFiles/game.dir/bandit.cpp.o.requires:
+.PHONY : CMakeFiles/game.dir/bandit.cpp.o.requires
+
+CMakeFiles/game.dir/bandit.cpp.o.provides: CMakeFiles/game.dir/bandit.cpp.o.requires
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/bandit.cpp.o.provides.build
+.PHONY : CMakeFiles/game.dir/bandit.cpp.o.provides
+
+CMakeFiles/game.dir/bandit.cpp.o.provides.build: CMakeFiles/game.dir/bandit.cpp.o
+
 # Object files for target game
 game_OBJECTS = \
 "CMakeFiles/game.dir/test.cpp.o" \
@@ -242,7 +265,8 @@ game_OBJECTS = \
 "CMakeFiles/game.dir/global.cpp.o" \
 "CMakeFiles/game.dir/things.cpp.o" \
 "CMakeFiles/game.dir/living_things.cpp.o" \
-"CMakeFiles/game.dir/non_living_things.cpp.o"
+"CMakeFiles/game.dir/non_living_things.cpp.o" \
+"CMakeFiles/game.dir/bandit.cpp.o"
 
 # External object files for target game
 game_EXTERNAL_OBJECTS =
@@ -255,6 +279,7 @@ game: CMakeFiles/game.dir/global.cpp.o
 game: CMakeFiles/game.dir/things.cpp.o
 game: CMakeFiles/game.dir/living_things.cpp.o
 game: CMakeFiles/game.dir/non_living_things.cpp.o
+game: CMakeFiles/game.dir/bandit.cpp.o
 game: CMakeFiles/game.dir/build.make
 game: /usr/lib/libSDLmain.a
 game: /usr/lib/libSDL.so
@@ -276,6 +301,7 @@ CMakeFiles/game.dir/requires: CMakeFiles/game.dir/global.cpp.o.requires
 CMakeFiles/game.dir/requires: CMakeFiles/game.dir/things.cpp.o.requires
 CMakeFiles/game.dir/requires: CMakeFiles/game.dir/living_things.cpp.o.requires
 CMakeFiles/game.dir/requires: CMakeFiles/game.dir/non_living_things.cpp.o.requires
+CMakeFiles/game.dir/requires: CMakeFiles/game.dir/bandit.cpp.o.requires
 .PHONY : CMakeFiles/game.dir/requires
 
 CMakeFiles/game.dir/clean:

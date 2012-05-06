@@ -111,6 +111,30 @@ game/fast:
 	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/build
 .PHONY : game/fast
 
+bandit.o: bandit.cpp.o
+.PHONY : bandit.o
+
+# target to build an object file
+bandit.cpp.o:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/bandit.cpp.o
+.PHONY : bandit.cpp.o
+
+bandit.i: bandit.cpp.i
+.PHONY : bandit.i
+
+# target to preprocess a source file
+bandit.cpp.i:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/bandit.cpp.i
+.PHONY : bandit.cpp.i
+
+bandit.s: bandit.cpp.s
+.PHONY : bandit.s
+
+# target to generate assembly for a file
+bandit.cpp.s:
+	$(MAKE) -f CMakeFiles/game.dir/build.make CMakeFiles/game.dir/bandit.cpp.s
+.PHONY : bandit.cpp.s
+
 character.o: character.cpp.o
 .PHONY : character.o
 
@@ -312,6 +336,9 @@ help:
 	@echo "... edit_cache"
 	@echo "... game"
 	@echo "... rebuild_cache"
+	@echo "... bandit.o"
+	@echo "... bandit.i"
+	@echo "... bandit.s"
 	@echo "... character.o"
 	@echo "... character.i"
 	@echo "... character.s"
